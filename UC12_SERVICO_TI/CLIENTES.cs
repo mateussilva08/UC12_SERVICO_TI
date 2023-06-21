@@ -11,12 +11,12 @@ using MySql.Data.MySqlClient;
 
 namespace UC12_SERVICO_TI
 {
-    public partial class Form1 : Form
+    public partial class CLIENTES : Form
     {
         string servidor;
         MySqlConnection conexao;
         MySqlCommand comando;
-        public Form1()
+        public CLIENTES()
         {
             InitializeComponent();
             servidor = "Server=localhost;Database=controle_ti;Uid=root;Pwd=";
@@ -24,7 +24,11 @@ namespace UC12_SERVICO_TI
             comando = conexao.CreateCommand();
         }
 
-        private void buttonCADASTRAR_Click(object sender, EventArgs e)
+       
+
+        
+
+        private void buttonCADASTRAR_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -40,7 +44,6 @@ namespace UC12_SERVICO_TI
             {
                 conexao.Close();
             }
-
         }
     }
 }
