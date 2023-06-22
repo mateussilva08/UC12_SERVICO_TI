@@ -22,8 +22,35 @@ namespace UC12_SERVICO_TI
             servidor = "Server=localhost;Database=controle_ti;Uid=root;Pwd=";
             conexao = new MySqlConnection(servidor);
             comando = conexao.CreateCommand();
+            mostrarclientes();
         }
+        private void mostrarclientes()
+        {
+            try
+            {
+                conexao.Open();
+                comando.CommandText = "SELECT * FROM tbl_cliente  ORDER BY nome ASC;";
 
+                MySqlDataAdapter adaptadorCONTATO = new MySqlDataAdapter(comando);
+
+                DataTable tabelaCONTATO = new DataTable();
+                adaptadorCONTATO.Fill(tabelaCONTATO);
+
+                dataGridView1.DataSource = tabelaCONTATO;
+                 
+
+
+
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
        
 
         
@@ -44,6 +71,11 @@ namespace UC12_SERVICO_TI
             {
                 conexao.Close();
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

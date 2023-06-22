@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxSERVICO = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxSITUACAO = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxORCAMENTO = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.textBoxSITUACAO = new System.Windows.Forms.TextBox();
+            this.textBoxSERVICO = new System.Windows.Forms.TextBox();
             this.buttonADICIONAR = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,13 +58,14 @@
             this.panel1.Size = new System.Drawing.Size(248, 338);
             this.panel1.TabIndex = 0;
             // 
-            // textBoxSERVICO
+            // label4
             // 
-            this.textBoxSERVICO.Location = new System.Drawing.Point(17, 61);
-            this.textBoxSERVICO.Multiline = true;
-            this.textBoxSERVICO.Name = "textBoxSERVICO";
-            this.textBoxSERVICO.Size = new System.Drawing.Size(214, 116);
-            this.textBoxSERVICO.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 198);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Orçamento";
             // 
             // label1
             // 
@@ -75,13 +76,6 @@
             this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "Serviço";
-            // 
-            // textBoxSITUACAO
-            // 
-            this.textBoxSITUACAO.Location = new System.Drawing.Point(17, 305);
-            this.textBoxSITUACAO.Name = "textBoxSITUACAO";
-            this.textBoxSITUACAO.Size = new System.Drawing.Size(136, 20);
-            this.textBoxSITUACAO.TabIndex = 3;
             // 
             // label3
             // 
@@ -99,14 +93,20 @@
             this.textBoxORCAMENTO.Size = new System.Drawing.Size(136, 20);
             this.textBoxORCAMENTO.TabIndex = 5;
             // 
-            // label4
+            // textBoxSITUACAO
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 198);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Orçamento";
+            this.textBoxSITUACAO.Location = new System.Drawing.Point(17, 305);
+            this.textBoxSITUACAO.Name = "textBoxSITUACAO";
+            this.textBoxSITUACAO.Size = new System.Drawing.Size(136, 20);
+            this.textBoxSITUACAO.TabIndex = 3;
+            // 
+            // textBoxSERVICO
+            // 
+            this.textBoxSERVICO.Location = new System.Drawing.Point(17, 61);
+            this.textBoxSERVICO.Multiline = true;
+            this.textBoxSERVICO.Name = "textBoxSERVICO";
+            this.textBoxSERVICO.Size = new System.Drawing.Size(214, 116);
+            this.textBoxSERVICO.TabIndex = 0;
             // 
             // buttonADICIONAR
             // 
@@ -154,6 +154,7 @@
             this.buttonALTERAR.TabIndex = 6;
             this.buttonALTERAR.Text = "Alterar";
             this.buttonALTERAR.UseVisualStyleBackColor = true;
+            this.buttonALTERAR.Click += new System.EventHandler(this.buttonALTERAR_Click);
             // 
             // FormSERVICO
             // 

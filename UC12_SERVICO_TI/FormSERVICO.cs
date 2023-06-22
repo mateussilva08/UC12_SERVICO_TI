@@ -41,5 +41,10 @@ namespace UC12_SERVICO_TI
                 conexao.Close();
             }
         }
+
+        private void buttonALTERAR_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
